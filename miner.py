@@ -164,7 +164,7 @@ def process_pdf(pdf_path, output_dir):
         xbrl_result = generate_xbrl_tree(json_result)
 
         # Write the resulting output
-        outfile_path = "outfile_dir/" + os.path.splitext(ntpath.basename(pdf_path))[0] + "-" + template["type_code"] + ".xml"
+        outfile_path = output_dir + "/" + os.path.splitext(ntpath.basename(pdf_path))[0] + "-" + template["type_code"] + ".xml"
         xbrl_result.write(outfile_path)
 
 
