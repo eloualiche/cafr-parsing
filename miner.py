@@ -140,7 +140,7 @@ def invoke_template(template, text):
     return result
 
 
-def process_pdf(pdf_path):
+def process_pdf(pdf_path, output_dir):
     """Takes a pdf path and attempts to extract all possible tables from it"""
 
     # TODO: This shouldn't be invoked every time
@@ -164,8 +164,11 @@ def process_pdf(pdf_path):
         xbrl_result = generate_xbrl_tree(json_result)
 
         # Write the resulting output
-        outfile_path = "results/" + os.path.splitext(ntpath.basename(pdf_path))[0] + "-" + template["type_code"] + ".xml"
+        outfile_path = "outfile_dir/" + os.path.splitext(ntpath.basename(pdf_path))[0] + "-" + template["type_code"] + ".xml"
         xbrl_result.write(outfile_path)
+
+
+
 
 
 # TODO: This method does NOT BELONG HERE (Just getting a first version written)
