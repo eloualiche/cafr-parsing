@@ -14,7 +14,7 @@ from pdfminer.layout import LAParams
 from pdfminer.image import ImageWriter
 
 
-def generate_pdf_text (pdf_path):
+def generate_pdf_text (pdf_path, output_dir="/tmp/containers-io/"):
     """Opens a pdf document, converts it to text, and returns that text."""
 
     # Set up input options
@@ -34,7 +34,7 @@ def generate_pdf_text (pdf_path):
     laparams = LAParams()
 
     # Set up the output file
-    outfile = ntpath.basename(pdf_path) + ".txt"
+    outfile = output_dir + ntpath.basename(pdf_path) + ".txt"
 
     if(not os.path.isfile(outfile)):
         outfp = file(outfile, 'w')
