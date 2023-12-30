@@ -273,16 +273,3 @@ def load_results_json(json_path):
         results_text = myFile.read()
     results_json = json.loads(results_text)
     return results_json
-
-
-## For now you can test this code by uncommenting and picking a file path
-process_pdf("data/ID_cafr2010.pdf")
-process_pdf("data/ID_cafr2011.pdf")
-process_pdf("data/ID_cafr2012.pdf")
-process_pdf("data/ID_cafr2013.pdf")
-process_pdf("data/ID_cafr2014.pdf")
-process_pdf("data/NY_cafr2010.pdf")
-process_pdf("data/NY_cafr2011.pdf")
-process_pdf("data/NY_cafr2012.pdf")
-process_pdf("data/NY_cafr2013.pdf")
-process_pdf("data/NY_cafr2014.pdf")
